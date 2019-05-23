@@ -20,9 +20,6 @@ public class SpaceWriter {
 		
 		Map<String, List<String>> spaceMap = collect(petitionList);
 		
-		List<String> lines = new ArrayList<>();
-		lines.add("hello");
-		
 		for(Map.Entry<String, List<String>> entry : spaceMap.entrySet()) {
 			Path file = Paths.get(entry.getKey() + ".html");
 			Files.write(file, entry.getValue(), Charset.forName("UTF-8"));
