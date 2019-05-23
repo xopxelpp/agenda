@@ -2,14 +2,13 @@ package agenda;
 
 import java.util.Date;
 
-public class Petition {
+public class Petition implements Cloneable {
 	private String activity;
 	private String space;
 	private Date startDate;
 	private Date endDate;
 	private String days;
 	private String hours;
-	
 	
 	public String getActivity() {
 		return activity;
@@ -51,7 +50,11 @@ public class Petition {
 	@Override
 	public String toString() {
 		return "Petition [activity=" + activity + ", space=" + space + ", startDate=" + startDate + ", endDate="
-				+ endDate + ", days=" + days + ", hours=" + hours + "]\n";
+				+ endDate + ", days=" + days + ", hours=" + hours + "]";
 	}
+	
+	public Petition clone()throws CloneNotSupportedException{  
+        return (Petition)super.clone();  
+    }
 	
 }

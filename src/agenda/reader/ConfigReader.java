@@ -1,7 +1,9 @@
-package agenda;
+package agenda.reader;
 
 import java.io.File;
 import java.util.Scanner;
+
+import agenda.Config;
 
 public class ConfigReader {
 	
