@@ -5,6 +5,7 @@ public class Config {
 	private int month;
 	private String lengIn;
 	private String lengOut;
+	
 	public int getYear() {
 		return year;
 	}

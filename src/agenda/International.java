@@ -26,7 +26,4 @@ public class International {
 		return "International [code=" + code + ", value=" + value + "]\n";
 	}
 	
-	
-	
-
 }

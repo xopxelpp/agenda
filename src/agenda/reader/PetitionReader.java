@@ -1,7 +1,8 @@
 package agenda.reader;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -26,8 +27,8 @@ public class PetitionReader {
 				Petition petition = new Petition();
 				petition.setActivity(value[0]);
 				petition.setSpace(value[1]);
-				petition.setStartDate(new SimpleDateFormat("dd/MM/yyyy").parse(value[2]));
-				petition.setEndDate(new SimpleDateFormat("dd/MM/yyyy").parse(value[3]));
+				petition.setStartDate(LocalDate.parse(value[2], DateTimeFormatter.ofPattern("dd/MM/yyyy")));
+				petition.setEndDate(LocalDate.parse(value[3], DateTimeFormatter.ofPattern("dd/MM/yyyy")));
 				petition.setDays(value[4]);
 				petition.setHours(value[5]);
 				

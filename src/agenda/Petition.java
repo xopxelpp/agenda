@@ -1,12 +1,12 @@
 package agenda;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Petition implements Cloneable {
 	private String activity;
 	private String space;
-	private Date startDate;
-	private Date endDate;
+	private LocalDate startDate;
+	private LocalDate endDate;
 	private String days;
 	private String hours;
 	
@@ -22,16 +22,16 @@ public class Petition implements Cloneable {
 	public void setSpace(String space) {
 		this.space = space;
 	}
-	public Date getStartDate() {
+	public LocalDate getStartDate() {
 		return startDate;
 	}
-	public void setStartDate(Date startDate) {
+	public void setStartDate(LocalDate startDate) {
 		this.startDate = startDate;
 	}
-	public Date getEndDate() {
+	public LocalDate getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(LocalDate endDate) {
 		this.endDate = endDate;
 	}
 	public String getDays() {

@@ -18,12 +18,11 @@ public class Application {
 		List<Petition> petitionList = PetitionReader.read();
 		System.out.println(petitionList.toString());
 		
-		InternationalReader reader = new InternationalReader(conf.getLengIn());
-		List<International> wordsList = reader.read();
-		System.out.println(wordsList.toString());
+		InternationalReader translator = new InternationalReader(conf.getLengOut());
+
 		
 		
-		SpaceWriter.write(petitionList);
+		SpaceWriter.write(conf, translator, petitionList);
 	}
 
 }
